@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:id="@+id/ScrollHome"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutHome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Primeiro LinearLayout -->
+            <LinearLayout
+                android:id="@+id/topPageHome"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/reppeating"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.002"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <!-- Conteúdo do primeiro LinearLayout -->
+                <TextView
+                    android:id="@+id/TextConect"
+                    android:layout_width="133dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/metal_mania"
+                    android:gravity="center"
+                    android:text="Conecte-se"
+                    android:textColor="@color/purple"
+                    android:textSize="24dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/logoTop"
+                android:layout_width="420dp"
+                android:layout_height="125dp"
+                android:background="@drawable/repeating_pattern"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/topPageHome">
+
+                <!-- Imagem alinhada à esquerda -->
+                <ImageView
+                    android:layout_width="203dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/logo_branco" />
+
+                <!-- Texto com a fonte Metal Mania alinhado à direita -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|center_vertical"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/metal_mania"
+                    android:gravity="left|center"
+                    android:text="Guitar World"
+                    android:textColor="@android:color/white"
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:background="@drawable/reppeating"
+                android:orientation="horizontal"
+                android:paddingStart="1dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="1dp"
+                android:paddingBottom="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/logoTop">
+
+                <Button
+                    android:id="@+id/button1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginStart="26dp"
+                    android:background="@color/white"
+                    android:fontFamily="@font/metal_mania"
+                    android:minWidth="48dp"
+                    android:minHeight="48dp"
+                    android:text="Página Inicial"
+                    android:textColor="@android:color/black"
+                    android:textSize="16dp" />
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginStart="16dp"
+                    android:background="@color/white"
+                    android:fontFamily="@font/metal_mania"
+                    android:minWidth="48dp"
+                    android:minHeight="48dp"
+                    android:text="Catálogo"
+                    android:textColor="@android:color/black"
+                    android:textSize="16dp" />
+
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginStart="16dp"
+                    android:background="@color/white"
+                    android:fontFamily="@font/metal_mania"
+                    android:minWidth="48dp"
+                    android:minHeight="48dp"
+                    android:text="Cadastre-se"
+                    android:textColor="@android:color/black"
+                    android:textSize="16dp" />
+
+            </LinearLayout>
+
+            <!-- Adicionando o FragmentContainerView ao LinearLayout -->
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragmentContainerView"
+                android:name="com.example.guitar_world_18.BlankFragment_home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
