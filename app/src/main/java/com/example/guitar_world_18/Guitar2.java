@@ -2,20 +2,20 @@ package com.example.guitar_world_18;
 
 import com.google.gson.annotations.SerializedName;
 
-public class Guitar {
-    @SerializedName("id_git")
+public class Guitar2 {
+    @SerializedName("id")
     private int id;
-    @SerializedName("name_git")
+    @SerializedName("name")
     String nome;
-    @SerializedName("price_git")
+    @SerializedName("price")
     String price;
-    @SerializedName("brand_brand")
+    @SerializedName("brand")
     String marca;
     @SerializedName("color")
     String foto;
 
 
-    public Guitar(int id, String nome, String price, String marca, String foto) {
+    public Guitar2(int id, String nome, String price, String marca, String foto) {
         this.id = id;
         this.nome = nome;
         this.price = price;

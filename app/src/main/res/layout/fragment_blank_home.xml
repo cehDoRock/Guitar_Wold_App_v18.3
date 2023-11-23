@@ -25,13 +25,14 @@
                 android:text="Explore a incrível variedade de guitarras disponíveis na nossa loja online. Oferecemos uma seleção cuidadosamente escolhida das melhores marcas e modelos para atender às suas necessidades musicais." />
 
             <!-- Imagem 1 -->
+
+            <!-- Parágrafo 2 -->
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="299dp"
                 android:contentDescription="Guitarra 2"
                 android:src="@drawable/slash" />
 
-            <!-- Parágrafo 2 -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
