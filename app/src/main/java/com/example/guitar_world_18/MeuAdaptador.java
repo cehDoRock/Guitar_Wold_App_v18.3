@@ -60,7 +60,7 @@ public class MeuAdaptador extends RecyclerView.Adapter<MeuAdaptador.ViewHolder> 
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Guitar guitar = guitars.get(position);
         holder.txtNome.setText(guitar.nome);
-        holder.txtPrice.setText(guitar.price);
+        holder.txtPrice.setText("R$" + guitar.price);
 //        holder.ivFoto.setImageResource(guitar.foto);
 
         String BASE_URL = "http://10.0.2.2/guitar-world/";

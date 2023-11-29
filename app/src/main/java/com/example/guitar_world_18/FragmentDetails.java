@@ -66,7 +66,7 @@ public class FragmentDetails extends Fragment {
                     ImageView imageView = view.findViewById(R.id.imageView);
                     // Populando os elementos com as informações da guitarra
                     txtName.setText(guitar.getNome());
-                    txtPrice.setText(guitar.getPrice());
+                    txtPrice.setText("R$" + guitar.getPrice());
                     txtMarca.setText(guitar.getMarca());
 
                     String BASE_URL = "http://10.0.2.2/guitar-world/";
